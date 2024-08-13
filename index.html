@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benevento Perfumes</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="onemillion.html">One Million</a></li>
+                <li><a href="ladymillion.html">Lady Million</a></li>
+                <li><a href="sedes.html">Nuestras Sedes</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <img src="img/banner perfume.jpg" alt="One Million" class="responsive">
+        <h1>Benevento Perfumes</h1>
+        <p>Sedes en Lima | Importancia en el mercado</p>
+    </header>
+
+    <main>
+        <section id="carousel">
+            <div id="banner-carousel">
+                <img src="img/img2.jpg" alt="One Million" class="active">
+                <img src="img/image.png" alt="Lady Million">
+            </div>
+        </section>
+
+        <section id="productos-table">
+            <h2>Quienes Somos</h2>
+            <p>En Benevento Perfumes nos dedicamos a ofrecer una experiencia única en el mundo de las fragancias de lujo. Desde nuestra fundación, nos hemos destacado por nuestra pasión por los perfumes exclusivos y la atención al detalle en cada uno de nuestros productos.</p>
+            <h2>Nuestros Productos Destacados</h2>
+            <p>Conozca nuestras fragancias más vendidas: <a href="onemillion.html">One Million</a> y <a href="ladymillion.html">Lady Million</a>.</p>
+
+            <h2>Tabla de Productos</h2>
+            <table class="productos-table">
+                <thead>
+                    <tr>
+                        <th>Nombre del Producto</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>One Million</td>
+                        <td>One Million de Paco Rabanne es una fragancia masculina que combina notas de especias, cuero y ámbar. Esta fragancia es conocida por su intensidad y elegancia, ideal para ocasiones especiales.</td>
+                        <td>S/499</td>
+                    </tr>
+                    <tr>
+                        <td>Lady Million</td>
+                        <td>Lady Million de Paco Rabanne es una fragancia femenina que encarna el glamour y la extravagancia. Con una mezcla cautivadora de notas florales como el neroli, la azucena y el jazmín, combinadas con la calidez del pachulí y el ámbar, esta fragancia es una declaración de estilo y sofisticación.</td>
+                        <td>S/499</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Benevento Perfumes. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        let currentBanner = 0;
+        const banners = document.querySelectorAll('#banner-carousel img');
+        setInterval(() => {
+            banners[currentBanner].classList.remove('active');
+            currentBanner = (currentBanner + 1) % banners.length;
+            banners[currentBanner].classList.add('active');
+        }, 3000);
+    </script>
+</body>
+</html>
